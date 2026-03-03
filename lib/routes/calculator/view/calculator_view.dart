@@ -1,6 +1,3 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +7,6 @@ import 'package:meal_plan/routes/calculator/bloc/calculator_bloc.dart';
 import 'package:meal_plan/routes/calculator/bloc/calculator_event.dart';
 import 'package:meal_plan/routes/calculator/bloc/calculator_state.dart';
 import 'package:meal_plan/utility/calculator.dart';
-import 'package:meal_plan/widget/form/Number.dart';
 
 class CalculatorPage extends StatelessWidget {
   const CalculatorPage({super.key});

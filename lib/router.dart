@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meal_plan/routes/calculator/view/calculator_view.dart';
@@ -20,12 +21,16 @@ extension GoRouterExtension on GoRouter {
   name: 'home',
   path: '/home',
 )
-class HomeRoute extends GoRouteData {
+class HomeRoute extends GoRouteData with $HomeRoute {
   const HomeRoute();
 
   @override
-  Widget build(BuildContext context, GoRouterState state) {
-    return const HomePage();
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    final child = const HomePage();
+    if (kIsWeb) {
+      return NoTransitionPage<void>(key: state.pageKey, child: child);
+    }
+    return CupertinoPage<void>(key: state.pageKey, child: child);
   }
 }
 
@@ -38,20 +43,28 @@ class HomeRoute extends GoRouteData {
         path: 'result',
       )
     ])
-class CalculatorRoute extends GoRouteData {
+class CalculatorRoute extends GoRouteData with $CalculatorRoute {
   const CalculatorRoute();
 
   @override
-  Widget build(BuildContext context, GoRouterState state) {
-    return const CalculatorPage();
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    const child = CalculatorPage();
+    if (kIsWeb) {
+      return NoTransitionPage<void>(key: state.pageKey, child: child);
+    }
+    return CupertinoPage<void>(key: state.pageKey, child: child);
   }
 }
 
-class CalculatorResultRoute extends GoRouteData {
+class CalculatorResultRoute extends GoRouteData with $CalculatorResultRoute {
   const CalculatorResultRoute();
 
   @override
-  Widget build(BuildContext context, GoRouterState state) {
-    return CalculatorResultPage(state.extra as CalculatorUtility);
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    final child = CalculatorResultPage(state.extra as CalculatorUtility);
+    if (kIsWeb) {
+      return NoTransitionPage<void>(key: state.pageKey, child: child);
+    }
+    return CupertinoPage<void>(key: state.pageKey, child: child);
   }
 }

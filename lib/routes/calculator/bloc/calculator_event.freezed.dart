@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,54 +9,46 @@ part of 'calculator_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CalculatorEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(int calories) editCalories,
-    required TResult Function(int meal) editMeal,
-    required TResult Function(double min, double max) editRepartition,
-    required TResult Function(Function onSuccess) submit,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int calories)? editCalories,
-    TResult? Function(int meal)? editMeal,
-    TResult? Function(double min, double max)? editRepartition,
-    TResult? Function(Function onSuccess)? submit,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int calories)? editCalories,
-    TResult Function(int meal)? editMeal,
-    TResult Function(double min, double max)? editRepartition,
-    TResult Function(Function onSuccess)? submit,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorCalories value) editCalories,
-    required TResult Function(CalculatoreMeal value) editMeal,
-    required TResult Function(CalculatorRpartition value) editRepartition,
-    required TResult Function(CalculatorSubmit value) submit,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorCalories value)? editCalories,
-    TResult? Function(CalculatoreMeal value)? editMeal,
-    TResult? Function(CalculatorRpartition value)? editRepartition,
-    TResult? Function(CalculatorSubmit value)? submit,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is CalculatorEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CalculatorEvent()';
+  }
+}
+
+/// @nodoc
+class $CalculatorEventCopyWith<$Res> {
+  $CalculatorEventCopyWith(
+      CalculatorEvent _, $Res Function(CalculatorEvent) __);
+}
+
+/// Adds pattern-matching-related methods to [CalculatorEvent].
+extension CalculatorEventPatterns on CalculatorEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CalculatorCalories value)? editCalories,
@@ -64,58 +56,255 @@ mixin _$CalculatorEvent {
     TResult Function(CalculatorRpartition value)? editRepartition,
     TResult Function(CalculatorSubmit value)? submit,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case CalculatorCalories() when editCalories != null:
+        return editCalories(_that);
+      case CalculatoreMeal() when editMeal != null:
+        return editMeal(_that);
+      case CalculatorRpartition() when editRepartition != null:
+        return editRepartition(_that);
+      case CalculatorSubmit() when submit != null:
+        return submit(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CalculatorCalories value) editCalories,
+    required TResult Function(CalculatoreMeal value) editMeal,
+    required TResult Function(CalculatorRpartition value) editRepartition,
+    required TResult Function(CalculatorSubmit value) submit,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case CalculatorCalories():
+        return editCalories(_that);
+      case CalculatoreMeal():
+        return editMeal(_that);
+      case CalculatorRpartition():
+        return editRepartition(_that);
+      case CalculatorSubmit():
+        return submit(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CalculatorCalories value)? editCalories,
+    TResult? Function(CalculatoreMeal value)? editMeal,
+    TResult? Function(CalculatorRpartition value)? editRepartition,
+    TResult? Function(CalculatorSubmit value)? submit,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case CalculatorCalories() when editCalories != null:
+        return editCalories(_that);
+      case CalculatoreMeal() when editMeal != null:
+        return editMeal(_that);
+      case CalculatorRpartition() when editRepartition != null:
+        return editRepartition(_that);
+      case CalculatorSubmit() when submit != null:
+        return submit(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int calories)? editCalories,
+    TResult Function(int meal)? editMeal,
+    TResult Function(double min, double max)? editRepartition,
+    TResult Function(Function onSuccess)? submit,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case CalculatorCalories() when editCalories != null:
+        return editCalories(_that.calories);
+      case CalculatoreMeal() when editMeal != null:
+        return editMeal(_that.meal);
+      case CalculatorRpartition() when editRepartition != null:
+        return editRepartition(_that.min, _that.max);
+      case CalculatorSubmit() when submit != null:
+        return submit(_that.onSuccess);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int calories) editCalories,
+    required TResult Function(int meal) editMeal,
+    required TResult Function(double min, double max) editRepartition,
+    required TResult Function(Function onSuccess) submit,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case CalculatorCalories():
+        return editCalories(_that.calories);
+      case CalculatoreMeal():
+        return editMeal(_that.meal);
+      case CalculatorRpartition():
+        return editRepartition(_that.min, _that.max);
+      case CalculatorSubmit():
+        return submit(_that.onSuccess);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int calories)? editCalories,
+    TResult? Function(int meal)? editMeal,
+    TResult? Function(double min, double max)? editRepartition,
+    TResult? Function(Function onSuccess)? submit,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case CalculatorCalories() when editCalories != null:
+        return editCalories(_that.calories);
+      case CalculatoreMeal() when editMeal != null:
+        return editMeal(_that.meal);
+      case CalculatorRpartition() when editRepartition != null:
+        return editRepartition(_that.min, _that.max);
+      case CalculatorSubmit() when submit != null:
+        return submit(_that.onSuccess);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $CalculatorEventCopyWith<$Res> {
-  factory $CalculatorEventCopyWith(
-          CalculatorEvent value, $Res Function(CalculatorEvent) then) =
-      _$CalculatorEventCopyWithImpl<$Res, CalculatorEvent>;
-}
 
-/// @nodoc
-class _$CalculatorEventCopyWithImpl<$Res, $Val extends CalculatorEvent>
-    implements $CalculatorEventCopyWith<$Res> {
-  _$CalculatorEventCopyWithImpl(this._value, this._then);
+class CalculatorCalories implements CalculatorEvent {
+  const CalculatorCalories(this.calories);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final int calories;
 
   /// Create a copy of CalculatorEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CalculatorCaloriesCopyWith<CalculatorCalories> get copyWith =>
+      _$CalculatorCaloriesCopyWithImpl<CalculatorCalories>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CalculatorCalories &&
+            (identical(other.calories, calories) ||
+                other.calories == calories));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, calories);
+
+  @override
+  String toString() {
+    return 'CalculatorEvent.editCalories(calories: $calories)';
+  }
 }
 
 /// @nodoc
-abstract class _$$CalculatorCaloriesImplCopyWith<$Res> {
-  factory _$$CalculatorCaloriesImplCopyWith(_$CalculatorCaloriesImpl value,
-          $Res Function(_$CalculatorCaloriesImpl) then) =
-      __$$CalculatorCaloriesImplCopyWithImpl<$Res>;
+abstract mixin class $CalculatorCaloriesCopyWith<$Res>
+    implements $CalculatorEventCopyWith<$Res> {
+  factory $CalculatorCaloriesCopyWith(
+          CalculatorCalories value, $Res Function(CalculatorCalories) _then) =
+      _$CalculatorCaloriesCopyWithImpl;
   @useResult
   $Res call({int calories});
 }
 
 /// @nodoc
-class __$$CalculatorCaloriesImplCopyWithImpl<$Res>
-    extends _$CalculatorEventCopyWithImpl<$Res, _$CalculatorCaloriesImpl>
-    implements _$$CalculatorCaloriesImplCopyWith<$Res> {
-  __$$CalculatorCaloriesImplCopyWithImpl(_$CalculatorCaloriesImpl _value,
-      $Res Function(_$CalculatorCaloriesImpl) _then)
-      : super(_value, _then);
+class _$CalculatorCaloriesCopyWithImpl<$Res>
+    implements $CalculatorCaloriesCopyWith<$Res> {
+  _$CalculatorCaloriesCopyWithImpl(this._self, this._then);
+
+  final CalculatorCalories _self;
+  final $Res Function(CalculatorCalories) _then;
 
   /// Create a copy of CalculatorEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? calories = null,
   }) {
-    return _then(_$CalculatorCaloriesImpl(
+    return _then(CalculatorCalories(
       null == calories
-          ? _value.calories
+          ? _self.calories
           : calories // ignore: cast_nullable_to_non_nullable
               as int,
     ));
@@ -124,153 +313,62 @@ class __$$CalculatorCaloriesImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CalculatorCaloriesImpl implements CalculatorCalories {
-  const _$CalculatorCaloriesImpl(this.calories);
+class CalculatoreMeal implements CalculatorEvent {
+  const CalculatoreMeal(this.meal);
 
-  @override
-  final int calories;
+  final int meal;
 
-  @override
-  String toString() {
-    return 'CalculatorEvent.editCalories(calories: $calories)';
-  }
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CalculatoreMealCopyWith<CalculatoreMeal> get copyWith =>
+      _$CalculatoreMealCopyWithImpl<CalculatoreMeal>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CalculatorCaloriesImpl &&
-            (identical(other.calories, calories) ||
-                other.calories == calories));
+            other is CalculatoreMeal &&
+            (identical(other.meal, meal) || other.meal == meal));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, calories);
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CalculatorCaloriesImplCopyWith<_$CalculatorCaloriesImpl> get copyWith =>
-      __$$CalculatorCaloriesImplCopyWithImpl<_$CalculatorCaloriesImpl>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, meal);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(int calories) editCalories,
-    required TResult Function(int meal) editMeal,
-    required TResult Function(double min, double max) editRepartition,
-    required TResult Function(Function onSuccess) submit,
-  }) {
-    return editCalories(calories);
+  String toString() {
+    return 'CalculatorEvent.editMeal(meal: $meal)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int calories)? editCalories,
-    TResult? Function(int meal)? editMeal,
-    TResult? Function(double min, double max)? editRepartition,
-    TResult? Function(Function onSuccess)? submit,
-  }) {
-    return editCalories?.call(calories);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int calories)? editCalories,
-    TResult Function(int meal)? editMeal,
-    TResult Function(double min, double max)? editRepartition,
-    TResult Function(Function onSuccess)? submit,
-    required TResult orElse(),
-  }) {
-    if (editCalories != null) {
-      return editCalories(calories);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorCalories value) editCalories,
-    required TResult Function(CalculatoreMeal value) editMeal,
-    required TResult Function(CalculatorRpartition value) editRepartition,
-    required TResult Function(CalculatorSubmit value) submit,
-  }) {
-    return editCalories(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorCalories value)? editCalories,
-    TResult? Function(CalculatoreMeal value)? editMeal,
-    TResult? Function(CalculatorRpartition value)? editRepartition,
-    TResult? Function(CalculatorSubmit value)? submit,
-  }) {
-    return editCalories?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorCalories value)? editCalories,
-    TResult Function(CalculatoreMeal value)? editMeal,
-    TResult Function(CalculatorRpartition value)? editRepartition,
-    TResult Function(CalculatorSubmit value)? submit,
-    required TResult orElse(),
-  }) {
-    if (editCalories != null) {
-      return editCalories(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class CalculatorCalories implements CalculatorEvent {
-  const factory CalculatorCalories(final int calories) =
-      _$CalculatorCaloriesImpl;
-
-  int get calories;
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CalculatorCaloriesImplCopyWith<_$CalculatorCaloriesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CalculatoreMealImplCopyWith<$Res> {
-  factory _$$CalculatoreMealImplCopyWith(_$CalculatoreMealImpl value,
-          $Res Function(_$CalculatoreMealImpl) then) =
-      __$$CalculatoreMealImplCopyWithImpl<$Res>;
+abstract mixin class $CalculatoreMealCopyWith<$Res>
+    implements $CalculatorEventCopyWith<$Res> {
+  factory $CalculatoreMealCopyWith(
+          CalculatoreMeal value, $Res Function(CalculatoreMeal) _then) =
+      _$CalculatoreMealCopyWithImpl;
   @useResult
   $Res call({int meal});
 }
 
 /// @nodoc
-class __$$CalculatoreMealImplCopyWithImpl<$Res>
-    extends _$CalculatorEventCopyWithImpl<$Res, _$CalculatoreMealImpl>
-    implements _$$CalculatoreMealImplCopyWith<$Res> {
-  __$$CalculatoreMealImplCopyWithImpl(
-      _$CalculatoreMealImpl _value, $Res Function(_$CalculatoreMealImpl) _then)
-      : super(_value, _then);
+class _$CalculatoreMealCopyWithImpl<$Res>
+    implements $CalculatoreMealCopyWith<$Res> {
+  _$CalculatoreMealCopyWithImpl(this._self, this._then);
+
+  final CalculatoreMeal _self;
+  final $Res Function(CalculatoreMeal) _then;
 
   /// Create a copy of CalculatorEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? meal = null,
   }) {
-    return _then(_$CalculatoreMealImpl(
+    return _then(CalculatoreMeal(
       null == meal
-          ? _value.meal
+          ? _self.meal
           : meal // ignore: cast_nullable_to_non_nullable
               as int,
     ));
@@ -279,156 +377,70 @@ class __$$CalculatoreMealImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CalculatoreMealImpl implements CalculatoreMeal {
-  const _$CalculatoreMealImpl(this.meal);
+class CalculatorRpartition implements CalculatorEvent {
+  const CalculatorRpartition(this.min, this.max);
 
-  @override
-  final int meal;
+  final double min;
+  final double max;
 
-  @override
-  String toString() {
-    return 'CalculatorEvent.editMeal(meal: $meal)';
-  }
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CalculatorRpartitionCopyWith<CalculatorRpartition> get copyWith =>
+      _$CalculatorRpartitionCopyWithImpl<CalculatorRpartition>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CalculatoreMealImpl &&
-            (identical(other.meal, meal) || other.meal == meal));
+            other is CalculatorRpartition &&
+            (identical(other.min, min) || other.min == min) &&
+            (identical(other.max, max) || other.max == max));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, meal);
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CalculatoreMealImplCopyWith<_$CalculatoreMealImpl> get copyWith =>
-      __$$CalculatoreMealImplCopyWithImpl<_$CalculatoreMealImpl>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, min, max);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(int calories) editCalories,
-    required TResult Function(int meal) editMeal,
-    required TResult Function(double min, double max) editRepartition,
-    required TResult Function(Function onSuccess) submit,
-  }) {
-    return editMeal(meal);
+  String toString() {
+    return 'CalculatorEvent.editRepartition(min: $min, max: $max)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int calories)? editCalories,
-    TResult? Function(int meal)? editMeal,
-    TResult? Function(double min, double max)? editRepartition,
-    TResult? Function(Function onSuccess)? submit,
-  }) {
-    return editMeal?.call(meal);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int calories)? editCalories,
-    TResult Function(int meal)? editMeal,
-    TResult Function(double min, double max)? editRepartition,
-    TResult Function(Function onSuccess)? submit,
-    required TResult orElse(),
-  }) {
-    if (editMeal != null) {
-      return editMeal(meal);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorCalories value) editCalories,
-    required TResult Function(CalculatoreMeal value) editMeal,
-    required TResult Function(CalculatorRpartition value) editRepartition,
-    required TResult Function(CalculatorSubmit value) submit,
-  }) {
-    return editMeal(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorCalories value)? editCalories,
-    TResult? Function(CalculatoreMeal value)? editMeal,
-    TResult? Function(CalculatorRpartition value)? editRepartition,
-    TResult? Function(CalculatorSubmit value)? submit,
-  }) {
-    return editMeal?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorCalories value)? editCalories,
-    TResult Function(CalculatoreMeal value)? editMeal,
-    TResult Function(CalculatorRpartition value)? editRepartition,
-    TResult Function(CalculatorSubmit value)? submit,
-    required TResult orElse(),
-  }) {
-    if (editMeal != null) {
-      return editMeal(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class CalculatoreMeal implements CalculatorEvent {
-  const factory CalculatoreMeal(final int meal) = _$CalculatoreMealImpl;
-
-  int get meal;
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CalculatoreMealImplCopyWith<_$CalculatoreMealImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CalculatorRpartitionImplCopyWith<$Res> {
-  factory _$$CalculatorRpartitionImplCopyWith(_$CalculatorRpartitionImpl value,
-          $Res Function(_$CalculatorRpartitionImpl) then) =
-      __$$CalculatorRpartitionImplCopyWithImpl<$Res>;
+abstract mixin class $CalculatorRpartitionCopyWith<$Res>
+    implements $CalculatorEventCopyWith<$Res> {
+  factory $CalculatorRpartitionCopyWith(CalculatorRpartition value,
+          $Res Function(CalculatorRpartition) _then) =
+      _$CalculatorRpartitionCopyWithImpl;
   @useResult
   $Res call({double min, double max});
 }
 
 /// @nodoc
-class __$$CalculatorRpartitionImplCopyWithImpl<$Res>
-    extends _$CalculatorEventCopyWithImpl<$Res, _$CalculatorRpartitionImpl>
-    implements _$$CalculatorRpartitionImplCopyWith<$Res> {
-  __$$CalculatorRpartitionImplCopyWithImpl(_$CalculatorRpartitionImpl _value,
-      $Res Function(_$CalculatorRpartitionImpl) _then)
-      : super(_value, _then);
+class _$CalculatorRpartitionCopyWithImpl<$Res>
+    implements $CalculatorRpartitionCopyWith<$Res> {
+  _$CalculatorRpartitionCopyWithImpl(this._self, this._then);
+
+  final CalculatorRpartition _self;
+  final $Res Function(CalculatorRpartition) _then;
 
   /// Create a copy of CalculatorEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? min = null,
     Object? max = null,
   }) {
-    return _then(_$CalculatorRpartitionImpl(
+    return _then(CalculatorRpartition(
       null == min
-          ? _value.min
+          ? _self.min
           : min // ignore: cast_nullable_to_non_nullable
               as double,
       null == max
-          ? _value.max
+          ? _self.max
           : max // ignore: cast_nullable_to_non_nullable
               as double,
     ));
@@ -437,181 +449,23 @@ class __$$CalculatorRpartitionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CalculatorRpartitionImpl implements CalculatorRpartition {
-  const _$CalculatorRpartitionImpl(this.min, this.max);
+class CalculatorSubmit implements CalculatorEvent {
+  const CalculatorSubmit(this.onSuccess);
 
-  @override
-  final double min;
-  @override
-  final double max;
-
-  @override
-  String toString() {
-    return 'CalculatorEvent.editRepartition(min: $min, max: $max)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CalculatorRpartitionImpl &&
-            (identical(other.min, min) || other.min == min) &&
-            (identical(other.max, max) || other.max == max));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, min, max);
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CalculatorRpartitionImplCopyWith<_$CalculatorRpartitionImpl>
-      get copyWith =>
-          __$$CalculatorRpartitionImplCopyWithImpl<_$CalculatorRpartitionImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(int calories) editCalories,
-    required TResult Function(int meal) editMeal,
-    required TResult Function(double min, double max) editRepartition,
-    required TResult Function(Function onSuccess) submit,
-  }) {
-    return editRepartition(min, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int calories)? editCalories,
-    TResult? Function(int meal)? editMeal,
-    TResult? Function(double min, double max)? editRepartition,
-    TResult? Function(Function onSuccess)? submit,
-  }) {
-    return editRepartition?.call(min, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int calories)? editCalories,
-    TResult Function(int meal)? editMeal,
-    TResult Function(double min, double max)? editRepartition,
-    TResult Function(Function onSuccess)? submit,
-    required TResult orElse(),
-  }) {
-    if (editRepartition != null) {
-      return editRepartition(min, max);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorCalories value) editCalories,
-    required TResult Function(CalculatoreMeal value) editMeal,
-    required TResult Function(CalculatorRpartition value) editRepartition,
-    required TResult Function(CalculatorSubmit value) submit,
-  }) {
-    return editRepartition(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorCalories value)? editCalories,
-    TResult? Function(CalculatoreMeal value)? editMeal,
-    TResult? Function(CalculatorRpartition value)? editRepartition,
-    TResult? Function(CalculatorSubmit value)? submit,
-  }) {
-    return editRepartition?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorCalories value)? editCalories,
-    TResult Function(CalculatoreMeal value)? editMeal,
-    TResult Function(CalculatorRpartition value)? editRepartition,
-    TResult Function(CalculatorSubmit value)? submit,
-    required TResult orElse(),
-  }) {
-    if (editRepartition != null) {
-      return editRepartition(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class CalculatorRpartition implements CalculatorEvent {
-  const factory CalculatorRpartition(final double min, final double max) =
-      _$CalculatorRpartitionImpl;
-
-  double get min;
-  double get max;
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CalculatorRpartitionImplCopyWith<_$CalculatorRpartitionImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CalculatorSubmitImplCopyWith<$Res> {
-  factory _$$CalculatorSubmitImplCopyWith(_$CalculatorSubmitImpl value,
-          $Res Function(_$CalculatorSubmitImpl) then) =
-      __$$CalculatorSubmitImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Function onSuccess});
-}
-
-/// @nodoc
-class __$$CalculatorSubmitImplCopyWithImpl<$Res>
-    extends _$CalculatorEventCopyWithImpl<$Res, _$CalculatorSubmitImpl>
-    implements _$$CalculatorSubmitImplCopyWith<$Res> {
-  __$$CalculatorSubmitImplCopyWithImpl(_$CalculatorSubmitImpl _value,
-      $Res Function(_$CalculatorSubmitImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? onSuccess = null,
-  }) {
-    return _then(_$CalculatorSubmitImpl(
-      null == onSuccess
-          ? _value.onSuccess
-          : onSuccess // ignore: cast_nullable_to_non_nullable
-              as Function,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$CalculatorSubmitImpl implements CalculatorSubmit {
-  const _$CalculatorSubmitImpl(this.onSuccess);
-
-  @override
   final Function onSuccess;
 
-  @override
-  String toString() {
-    return 'CalculatorEvent.submit(onSuccess: $onSuccess)';
-  }
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CalculatorSubmitCopyWith<CalculatorSubmit> get copyWith =>
+      _$CalculatorSubmitCopyWithImpl<CalculatorSubmit>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CalculatorSubmitImpl &&
+            other is CalculatorSubmit &&
             (identical(other.onSuccess, onSuccess) ||
                 other.onSuccess == onSuccess));
   }
@@ -619,99 +473,43 @@ class _$CalculatorSubmitImpl implements CalculatorSubmit {
   @override
   int get hashCode => Object.hash(runtimeType, onSuccess);
 
+  @override
+  String toString() {
+    return 'CalculatorEvent.submit(onSuccess: $onSuccess)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $CalculatorSubmitCopyWith<$Res>
+    implements $CalculatorEventCopyWith<$Res> {
+  factory $CalculatorSubmitCopyWith(
+          CalculatorSubmit value, $Res Function(CalculatorSubmit) _then) =
+      _$CalculatorSubmitCopyWithImpl;
+  @useResult
+  $Res call({Function onSuccess});
+}
+
+/// @nodoc
+class _$CalculatorSubmitCopyWithImpl<$Res>
+    implements $CalculatorSubmitCopyWith<$Res> {
+  _$CalculatorSubmitCopyWithImpl(this._self, this._then);
+
+  final CalculatorSubmit _self;
+  final $Res Function(CalculatorSubmit) _then;
+
   /// Create a copy of CalculatorEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
   @pragma('vm:prefer-inline')
-  _$$CalculatorSubmitImplCopyWith<_$CalculatorSubmitImpl> get copyWith =>
-      __$$CalculatorSubmitImplCopyWithImpl<_$CalculatorSubmitImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(int calories) editCalories,
-    required TResult Function(int meal) editMeal,
-    required TResult Function(double min, double max) editRepartition,
-    required TResult Function(Function onSuccess) submit,
+  $Res call({
+    Object? onSuccess = null,
   }) {
-    return submit(onSuccess);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int calories)? editCalories,
-    TResult? Function(int meal)? editMeal,
-    TResult? Function(double min, double max)? editRepartition,
-    TResult? Function(Function onSuccess)? submit,
-  }) {
-    return submit?.call(onSuccess);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int calories)? editCalories,
-    TResult Function(int meal)? editMeal,
-    TResult Function(double min, double max)? editRepartition,
-    TResult Function(Function onSuccess)? submit,
-    required TResult orElse(),
-  }) {
-    if (submit != null) {
-      return submit(onSuccess);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorCalories value) editCalories,
-    required TResult Function(CalculatoreMeal value) editMeal,
-    required TResult Function(CalculatorRpartition value) editRepartition,
-    required TResult Function(CalculatorSubmit value) submit,
-  }) {
-    return submit(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorCalories value)? editCalories,
-    TResult? Function(CalculatoreMeal value)? editMeal,
-    TResult? Function(CalculatorRpartition value)? editRepartition,
-    TResult? Function(CalculatorSubmit value)? submit,
-  }) {
-    return submit?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorCalories value)? editCalories,
-    TResult Function(CalculatoreMeal value)? editMeal,
-    TResult Function(CalculatorRpartition value)? editRepartition,
-    TResult Function(CalculatorSubmit value)? submit,
-    required TResult orElse(),
-  }) {
-    if (submit != null) {
-      return submit(this);
-    }
-    return orElse();
+    return _then(CalculatorSubmit(
+      null == onSuccess
+          ? _self.onSuccess
+          : onSuccess // ignore: cast_nullable_to_non_nullable
+              as Function,
+    ));
   }
 }
 
-abstract class CalculatorSubmit implements CalculatorEvent {
-  const factory CalculatorSubmit(final Function onSuccess) =
-      _$CalculatorSubmitImpl;
-
-  Function get onSuccess;
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CalculatorSubmitImplCopyWith<_$CalculatorSubmitImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

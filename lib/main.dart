@@ -1,5 +1,5 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meal_plan/router.dart';
 
@@ -10,7 +10,6 @@ void main() {
 class MealPlan extends StatelessWidget {
   const MealPlan({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return const App();
@@ -27,75 +26,99 @@ class App extends StatelessWidget {
       routes: $appRoutes,
     );
 
+    const seed = Color(0xFFE53935);
+    const bg = Color(0xFF111315);
+    const surface = Color(0xFF1A1D21);
+
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: seed,
+      brightness: Brightness.dark,
+    ).copyWith(
+      surface: surface,
+      surfaceContainerHighest: const Color(0xFF262A31),
+    );
+
+    final theme = ThemeData(
+      useMaterial3: true,
+      colorScheme: colorScheme,
+      scaffoldBackgroundColor: bg,
+      canvasColor: bg,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: bg,
+        foregroundColor: Colors.white,
+        elevation: 0,
+        surfaceTintColor: Colors.transparent,
+        centerTitle: false,
+        titleTextStyle: TextStyle(
+          color: Colors.white,
+          fontSize: 28,
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+      cardTheme: const CardThemeData(
+        color: surface,
+        elevation: 0,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: seed,
+          foregroundColor: Colors.white,
+          minimumSize: const Size.fromHeight(52),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: surface,
+        labelStyle: const TextStyle(color: Colors.white70, fontSize: 18),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.18)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: seed, width: 1.4),
+        ),
+      ),
+      sliderTheme: const SliderThemeData(
+        activeTrackColor: seed,
+        inactiveTrackColor: Colors.white24,
+        thumbColor: Colors.white,
+        trackHeight: 8,
+      ),
+      splashFactory: kIsWeb ? NoSplash.splashFactory : InkRipple.splashFactory,
+      highlightColor: Colors.transparent,
+    );
+
     return MaterialApp.router(
-        routerConfig: router,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-          primaryColor: Colors.red,
-          scaffoldBackgroundColor: Colors.black45,
-          appBarTheme: Theme.of(context).appBarTheme.copyWith(
-              backgroundColor: Colors.black45,
-              foregroundColor: Colors.white,
-              titleTextStyle: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold)),
-          textTheme: Theme.of(context)
-              .textTheme
-              .apply(bodyColor: Colors.white, displayColor: Colors.white),
-          elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            foregroundColor: Colors.white,
-          )),
-          inputDecorationTheme: Theme.of(context).inputDecorationTheme.copyWith(
-              labelStyle: const TextStyle(color: Colors.white, fontSize: 24),
-              focusedBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.red))),
-          sliderTheme: Theme.of(context).sliderTheme.copyWith(
-              activeTrackColor: Colors.red,
-              inactiveTrackColor: Colors.red,
-              secondaryActiveTrackColor: Colors.red,
-              thumbColor: Colors.white,
-              trackHeight: 8),
-          useMaterial3: true,
-        ),
-        builder: (context, widget) {
-          return widget ?? const SizedBox.shrink();
-        });
-  }
-}
-
-class $appRoute {}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Meal Plan'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '1',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      debugShowCheckedModeBanner: false,
+      routerConfig: router,
+      theme: theme,
+      builder: (context, widget) {
+        final content = widget ?? const SizedBox.shrink();
+        return LayoutBuilder(
+          builder: (context, constraints) {
+            final useBoundedLayout = constraints.maxWidth >= 900;
+            if (!useBoundedLayout) {
+              return content;
+            }
+            return ColoredBox(
+              color: bg,
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 980),
+                  child: content,
+                ),
+              ),
+            );
+          },
+        );
+      },
     );
   }
 }

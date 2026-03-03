@@ -14,71 +14,86 @@ List<RouteBase> get $appRoutes => [
 RouteBase get $homeRoute => GoRouteData.$route(
       path: '/home',
       name: 'home',
-      factory: $HomeRouteExtension._fromState,
+      factory: $HomeRoute._fromState,
     );
 
-extension $HomeRouteExtension on HomeRoute {
+mixin $HomeRoute on GoRouteData {
   static HomeRoute _fromState(GoRouterState state) => const HomeRoute();
 
+  @override
   String get location => GoRouteData.$location(
         '/home',
       );
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
 RouteBase get $calculatorRoute => GoRouteData.$route(
       path: '/calculator',
       name: 'calculator',
-      factory: $CalculatorRouteExtension._fromState,
+      factory: $CalculatorRoute._fromState,
       routes: [
         GoRouteData.$route(
           path: 'result',
           name: 'result',
-          factory: $CalculatorResultRouteExtension._fromState,
+          factory: $CalculatorResultRoute._fromState,
         ),
       ],
     );
 
-extension $CalculatorRouteExtension on CalculatorRoute {
+mixin $CalculatorRoute on GoRouteData {
   static CalculatorRoute _fromState(GoRouterState state) =>
       const CalculatorRoute();
 
+  @override
   String get location => GoRouteData.$location(
         '/calculator',
       );
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $CalculatorResultRouteExtension on CalculatorResultRoute {
+mixin $CalculatorResultRoute on GoRouteData {
   static CalculatorResultRoute _fromState(GoRouterState state) =>
       const CalculatorResultRoute();
 
+  @override
   String get location => GoRouteData.$location(
         '/calculator/result',
       );
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
