@@ -37,7 +37,7 @@ class CalculatorUtility {
 
   double get proteins => repartition.proteins;
   double get proteinsCalories => (calories / 100) * repartition.proteins;
-  double get proteinsGrams => carbsCalories / 4;
+  double get proteinsGrams => proteinsCalories / 4;
 
   double get fats => repartition.fats;
   double get fatsCalories => (calories / 100) * repartition.fats;
